@@ -49,6 +49,13 @@ def test_sql_index(
         Column("user_id", Integer, primary_key=True),
         Column("foo", String(16), nullable=False),
     )
+    test_table_College = Table(
+        name="college",
+        metadata=metadata_obj,
+
+
+
+    )
     metadata_obj.create_all(engine)
     # NOTE: we can use the default output parser for this
     index_kwargs, _ = struct_kwargs
